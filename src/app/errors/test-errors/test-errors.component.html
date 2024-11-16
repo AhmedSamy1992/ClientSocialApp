@@ -1,0 +1,16 @@
+<div>
+    <button class="btn btn-outline-primary" (click)="test500Error()">Test 500 error</button>
+    <button class="btn btn-outline-primary" (click)="test4ValidationForRegister00Error()">Test 400 validation error</button>
+    <button class="btn btn-outline-primary" (click)="test404NotFound()">Test 404 Not Found error</button>
+
+    @if (validationsErrors.length > 0) {
+        <div class="row mt-5">
+            <ul class="text-danger">
+                @for (error of validationsErrors; track $index) {
+                    <li>{{error}}</li>
+                }
+            </ul>
+
+        </div>
+    }
+</div>
