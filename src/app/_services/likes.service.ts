@@ -18,6 +18,7 @@ export class LikesService {
     return this.http.post(`${this.baseUrl}likes/${targetId}`, {})
   }
 
+  //get all likes
   getLikes(predicate: string, pageNumber: number, pageSize: number) {
     let params = setPaginationHeaders(pageNumber, pageSize);
 
